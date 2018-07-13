@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.briup.app03.dao.StudentMapper">
+
+
+	<select id="findAll" resultType="com.briup.app03.bean.Student">
+
+		select * from tbl_student
+	</select>
+
+
+	<select id="findById" resultType="com.briup.app03.bean.Student">
+		select * from tbl_student where id = #{id} ;
+	</select>
+<!-- 插入数据 -->
+	<insert id="insertId" parameterType="com.briup.app03.bean.Student" >
+		insert into tbl_student (id,username,password,email)
+		values (#{id},#{username},#{password},#{email})
+	</insert>
+	<insert id="save" parameterType="com.briup.app03.bean.Student">
+	insert tbl_student  values(null,#{name},#{age})
+	</insert>
+	<!-- 操作结束 -->
+	<!-- 修改就是 整个整个的修改  而不是一小部分的修改 -->
+	<!-- 修改操作 -->
+	<update id="updata" parameterType="com.briup.app03.bean.Student">
+	update tbl_student set name=#{name},age=#{age} where id=#{id}
+	</update>
+	<!-- 结束操作 -->
+	
+	<!-- 删除操作 -->
+	<delete id="dele" parameterType="long">
+	delete  from  tbl_student  where id =#{id} 
+	</delete>
+	
+	<select id="findIS" resultType="com.briup.app03.bean.Student">
+  SELECT * FROM PERSON WHERE ID = #{id}
+</select>
+	
+</mapper>
