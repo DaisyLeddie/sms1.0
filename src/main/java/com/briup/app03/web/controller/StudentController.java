@@ -103,15 +103,15 @@ public class StudentController {
 			return MsgResponse.error(e.getMessage());
 		}
 	}
-	@GetMapping("findIS")
-	public MsgResponse findIS (Student student){
-		try {
-			studentService.findIS(student);
-			return MsgResponse.success("查询成功", null);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return MsgResponse.error(e.getMessage());
-		}
-	}
+//	@GetMapping("findIS")
+//	public MsgResponse findIS (Student student){
+//		try {
+//			studentService.findIS(student);
+//			return MsgResponse.success("查询成功", null);
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//			return MsgResponse.error(e.getMessage());
+//		}
+//	}
 }

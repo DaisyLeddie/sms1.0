@@ -68,14 +68,13 @@ public class StudentServiceImpl implements IStudentService{
 			throw  new Exception("删除的学生不存在!");
 		}
 		
-//		1
 	}
-	@Override
-	public Student findIS(Student student) throws Exception {
-		// TODO Auto-generated method stub
-		Student student =   studentMapper.findIS(student);
-		return student;
-	}
+//	@Override
+//	public Student findIS(Student student) throws Exception {
+//		// TODO Auto-generated method stub
+//		Student student1 =   studentMapper.findIS(student1);
+//		return student1;
+//	}
 	 
 	 
 }

@@ -14,5 +14,5 @@ public interface IStudentService {
 	void save(Student student) throws Exception;
 	void  updata(Student student) throws Exception;
 	void dele(long id) throws Exception;
-	Student findIS(Student student) throws Exception;
+//	Student findIS(Student student) throws Exception;
 }

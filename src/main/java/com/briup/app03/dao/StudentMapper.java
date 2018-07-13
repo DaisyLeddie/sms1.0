@@ -16,6 +16,7 @@ public interface StudentMapper {
 		void updata(Student student);
 //		删除学生信息
 		void dele(long id);
-		
+//		配合查询
+//       Student findIS(Student student);
 		
 }
